@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<meta charset=UTF-8>
+<title>video</title>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#canvas {
+  display: none;
+}
+
+ol {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+</style>
+<main>
+  <h1>video</h1>
+  <ol>
+    <li>
+      <figure>
+        <figcaption>original</figcaption>
+        <video id=before></video>
+       </figure>
+    </li>
+    <li>
+      <figure>
+        <figcaption>filtered</figcaption>
+        <video id=after></video>
+      </figure>
+    </li>
+  </ol>
+</main>
+<canvas id=canvas></canvas>
+<script src=main.js type=module></script>
