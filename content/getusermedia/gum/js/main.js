@@ -47,7 +47,7 @@ async function init(e) {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     const afterStream = new MediaStream();
     processStream(stream, afterStream);
-    handleSuccess(afterStream);
+    handleSuccess(stream);
     e.target.disabled = true;
   } catch (e) {
     handleError(e);
