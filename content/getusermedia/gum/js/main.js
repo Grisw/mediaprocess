@@ -46,8 +46,9 @@ async function init(e) {
   try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     const afterStream = new MediaStream();
-    processStream(stream, afterStream);
     handleSuccess(afterStream);
+    errorMsg("erqwerwqer");
+    processStream(stream, afterStream);
     e.target.disabled = true;
   } catch (e) {
     handleError(e);
@@ -58,6 +59,7 @@ async function processStream(beforeVideo, afterStream) {
   const canvas = document.getElementById('canvas');
   const context = canvas.getContext('2d');
   const process = () => {
+    errorMsg("dfsfsdf");
     canvas.width = beforeVideo.videoWidth;
     canvas.height = beforeVideo.videoHeight;
     context.drawImage(beforeVideo, 0, 0, canvas.width, canvas.height);
